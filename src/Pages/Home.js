@@ -21,13 +21,13 @@ const HomeCSS = css`
   }
 `
 const headerCSS = css`
-  width: 45%;
+  width: 40%;
   margin: .5rem auto;
   background-color: #EA755D;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.5rem 1rem;
+  padding: 1.75rem 1rem;
   color: ${Variable.FontColor};
   border-radius: ${Variable.BorderRadius};
   @media (max-width: 768px) {
@@ -40,7 +40,7 @@ const leftSideHeader = css`
   align-items: center;
 `
 const mainCSS = css`
-  width: 45%;
+  width: 40%;
   margin: 20px auto;
   border-radius: ${Variable.BorderRadius};
   background-color: #FEFCF7;
