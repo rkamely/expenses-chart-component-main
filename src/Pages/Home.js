@@ -11,7 +11,7 @@ import logo from "../Assets/images/logo.svg"
 const HomeCSS = css`
   margin: auto;
   background-color: #F7E9DC;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -21,18 +21,15 @@ const HomeCSS = css`
   }
 `
 const headerCSS = css`
-  width: 40%;
+  width: 45%;
   margin: .5rem auto;
   background-color: #EA755D;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: .5rem 1rem;
+  padding: 1.5rem 1rem;
   color: ${Variable.FontColor};
   border-radius: ${Variable.BorderRadius};
-  @media (max-width: 992px) {
-    width: 60%;
-  }
   @media (max-width: 768px) {
     width: 90%;
   }
@@ -43,23 +40,19 @@ const leftSideHeader = css`
   align-items: center;
 `
 const mainCSS = css`
-  width: 40%;
+  width: 45%;
   margin: 20px auto;
   border-radius: ${Variable.BorderRadius};
   background-color: #FEFCF7;
   display: flex;
   flex-direction: column;
   padding: .5rem 1rem;
-  height: 65vh;
-  @media (max-width: 992px) {
-    width: 60%;
-    height: 70vh;
-  }
+
   @media (max-width: 768px) {
     width: 90%;
   }
 
-  h5, h4 {
+  h5, h4,h2 {
     color: #342015
   }
 
@@ -73,9 +66,9 @@ const aboveMain = css`
 `
 const belowMain = css`
   border-top: ${Variable.Border};
-  padding: 2rem 0;
+  padding: 1rem 0;
   width: 90%;
-  margin: 1rem auto;
+  margin:0 auto;
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
@@ -84,11 +77,12 @@ const belowMain = css`
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-around;
   }
 `
 
 function Home() {
-    const [sum,setSum]  = useState(0)
+    const [sum, setSum] = useState(0)
     return (
         <section css={HomeCSS}>
             <header css={headerCSS}>
@@ -99,12 +93,12 @@ function Home() {
                 <img src={logo} alt="logo"/>
             </header>
             <main css={mainCSS}>
-                <h5 css={aboveMain}>Spending - Last 7 days</h5>
-                <Chart setSum={setSum} />
+                <h4 css={aboveMain}>Spending - Last 7 days</h4>
+                <Chart setSum={setSum}/>
                 <div css={belowMain}>
                     <div>
                         <h6>Total this month</h6>
-                        <h4>${sum}</h4>
+                        <h2>${sum}</h2>
                     </div>
                     <div>
                         <h5>+2.4% </h5>

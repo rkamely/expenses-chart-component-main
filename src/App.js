@@ -5,20 +5,22 @@ import React from "react";
 import {Global, css} from '@emotion/react'
 import * as Variable from './Constants/Variables';
 import Routes from "./Routes/AllRoutes";
+// import "../public/Heebo-Thin.ttf";
 
 function App() {
 
     const global = () => css`
       @font-face {
-        font-family: "IRANSans";
-        src: local('IRANSans'), url('Assets/Fonts/iransans.woff') format('truetype');
+        font-family: "Heebo";
+        src: local("Heebo"), url("Heebo-Bold.ttf") format("truetype");
+      
       }
 
       * {
         box-sizing: border-box;
         padding: 0;
         margin: 0;
-        font-family: 'IRANSans';
+        font-family: "Heebo" ,sans-serif;
         text-decoration: none;
         direction: ltr;
         scroll-behavior: smooth;
